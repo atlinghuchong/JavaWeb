@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!--配置Servlet，即表示Servlet交给容器去管理Tomcat-->
+
+
+
+
+    <!--1. 给哪个servlet进行配置 ？ 答：我们现在要给DateServlet配置-->
+    <servlet>
+        <!--表示的就是当前这个Servlet在web.xml文件中起一个唯一的名字-->
+        <servlet-name>dateServlet</servlet-name>
+        <!--写完整的包结构名称,格式：包名.类名-->
+        <servlet-class>com.cuikaiyang.web.DateServlet</servlet-class>
+    </servlet>
+
+
+    <!--2. 将对应的servlet配置一个怎样的访问名称 ？ 答：最好根据业务名字取访问名称-->
+    <servlet-mapping>
+        <!--这里的名字需要和servlet标签的name标签名字一致-->
+        <servlet-name>dateServlet</servlet-name>
+        <!--标签这个servlet它的访问url是什么，必须使用"/"开头-->
+        <url-pattern>/date</url-pattern>
+    </servlet-mapping>
+</web-app>
