@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--action属性：用于表示：将页面中的数据提交给谁，提交给后端的BmiServlet，别名叫bmi。其实就是对应后端的一个重写service的方法。-->
+    <!--method属性：表示表单中的数据以什么样的方式提交给servlet，提交方式为：get或者post-->
+    <form action="bmi" method="get">
+        <fieldset>
+            <legend>计算BMI指数</legend>
+            身高(米)：<input type="text" name="height"><br>
+            体重(公斤)：<input type="text" name="weight"><br>
+            性别：<br>
+            <input type="radio" name="gender" value="M" checked="checked">男 <br>
+            <input type="radio" name="gender" value="F" checked="checked">女 <br>
+            <input type="checkbox" name="hobby" value="chouyan"> 抽烟
+            <input type="checkbox" name="hobby" value="hejiu"> 喝酒
+            <input type="checkbox" name="hobby" value="tangtou"> 烫头
+
+            <input type="submit" value="确定">
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
